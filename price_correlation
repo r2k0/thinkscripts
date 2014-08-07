@@ -1,0 +1,15 @@
+
+input length = 10;
+input correlationWithSecurity = "TICKER_SYMBOL";
+input lower = .90;
+input upper = 1.0;
+input choice = {default "Positive", "Negative"};
+
+plot Correlation;
+
+switch (choice){
+	case "positive":
+		Correlation = between(Correlation(close, close(correlationWithSecurity), length),lower, upper);
+	case "negative":
+	    Correlation =  between(Correlation(close, close(correlationWithSecurity), length),-upper, -lower);
+		}

@@ -1,0 +1,3 @@
+#average volume of 50 perios if greater than 500,000
+#using 50 for daily 
+plot scan = average(volume, 50) > 500000;

@@ -1,0 +1,2 @@
+#volume greater than two times the average volume using daily aggregation period
+plot scan = volume > 2 * average(volume, 50);
